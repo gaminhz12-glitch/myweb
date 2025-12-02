@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phản hồi - Web bán hàng</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="banner">
+            <img src="img/Neon Blue Futuristic Technology Logo.png" alt="">
+            <img src="img/banner.jpg" alt="">
+        </div>
+        <div class="menu">
+            <button class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+            <ul>
+                <li><a href="trangchu.html">Trang chủ</a></li>
+                <li>
+                    <a href="#" id="cart-link">
+            Giỏ hàng <span id="cart-count" class="cart-badge">0</span>
+          </a>
+                </li>
+                <li><a href="lienhe.html">Liên hệ</a></li>
+                <li><a href="phanhoi.html" class="active">Phản hồi</a></li>
+            </ul>
+            <form class="search-bar" id="search-form">
+                <input type="text" id="search-input" placeholder="Tìm sản phẩm...">
+                <button type="submit">🔍</button>
+            </form>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <h2>Danh mục</h2>
+            <nav>
+                <ul id="category-list">
+                    <li><a href="#" data-category="all" class="active">Tất cả</a></li>
+                    <li><a href="#" data-category="audio">Âm thanh</a></li>
+                    <li><a href="#" data-category="computer-accessories">Phụ kiện máy tính</a></li>
+                    <li><a href="#" data-category="mobile-charging">Di động và sạc</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="main feedback-layout">
+            <h2>Phản hồi của bạn</h2>
+            <p>Chúng tôi rất mong nhận được ý kiến đóng góp để cải thiện dịch vụ.</p>
+
+            <form class="feedback-form">
+                <label for="name">Tên của bạn:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+
+                <label for="rating">Đánh giá:</label>
+                <select id="rating" name="rating" required>
+          <option value="">-- Chọn mức độ hài lòng --</option>
+          <option value="5">⭐⭐⭐⭐⭐ Rất hài lòng</option>
+          <option value="4">⭐⭐⭐⭐ Hài lòng</option>
+          <option value="3">⭐⭐⭐ Bình thường</option>
+          <option value="2">⭐⭐ Chưa tốt</option>
+          <option value="1">⭐ Rất tệ</option>
+        </select>
+
+                <label for="message">Nội dung góp ý:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Gửi phản hồi</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Cửa hàng Công nghệ. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal giỏ hàng -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <h2>Giỏ hàng của bạn</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                        <th>Tổng</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items"></tbody>
+            </table>
+            <h3>Tổng cộng: <span id="cart-total">0₫</span></h3>
+            <button id="checkout-btn">Thanh toán</button>
+            <button id="close-cart">Đóng</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

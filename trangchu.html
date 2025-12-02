@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Web bán hàng</title>
+</head>
+
+<body>
+    <header>
+        <div class="banner">
+            <img src="img/Neon Blue Futuristic Technology Logo.png" alt="">
+            <img src="img/banner.jpg" alt="">
+        </div>
+        <div class="menu">
+            <button class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+            <ul>
+                <li><a href="trangchu.html">Trang chủ</a></li>
+                <li>
+                    <a href="#" id="cart-link">
+    Giỏ hàng <span id="cart-count" class="cart-badge">0</span>
+  </a>
+                </li>
+                <li><a href="lienhe.html">Liên hệ</a></li>
+                <li><a href="phanhoi.html">Phản hồi</a></li>
+            </ul>
+            <form class="search-bar" id="search-form">
+                <input type="text" id="search-input" placeholder="Tìm sản phẩm...">
+                <button type="submit">🔍</button>
+            </form>
+
+        </div>
+    </header>
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <h2>Danh mục</h2>
+            <nav>
+                <ul id="category-list">
+                    <li><a href="#" data-category="all" class="active">Tất cả</a></li>
+                    <li><a href="#" data-category="audio">Âm thanh</a></li>
+                    <li><a href="#" data-category="computer-accessories">Phụ kiện máy tính</a></li>
+                    <li><a href="#" data-category="mobile-charging">Di động và sạc</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main">
+            <div class="product" data-category="audio" data-name="Tai nghe Bluetooth On-Ear Nova X1" data-price="499000">
+                <img src="img/Tai nghe Bluetooth On-Ear Nova X1.jpg" alt="">
+                <div class="name">Tai nghe Bluetooth On-Ear Nova X1</div>
+                <div class="price">499.000₫</div>
+                <button onclick="addToCart('Tai nghe Bluetooth On-Ear Nova X1', 499000)">Thêm vào giỏ</button>
+            </div>
+            <div class="product" data-category="audio" data-name="Tai nghe True Wireless Earbuds MiniPro" data-price="699000">
+                <img src="img/Tai nghe True Wireless Earbuds MiniPro.jpg" alt="">
+                <div class="name">Tai nghe True Wireless Earbuds MiniPro</div>
+                <div class="price">699.000₫</div>
+                <button onclick="addToCart('Tai nghe True Wireless Earbuds MiniPro', 699000)">Thêm vào giỏ</button>
+            </div>
+            <div class="product" data-category="audio" data-name="Loa Bluetooth Di Động BeatBox 10W" data-price="349000">
+                <img src="img/Loa Bluetooth Di Động BeatBox 10W.png" alt="">
+                <div class="name">Loa Bluetooth Di Động BeatBox 10W</div>
+                <div class="price">349.000₫</div>
+                <button onclick="addToCart('Loa Bluetooth Di Động BeatBox 10W', 349000)">Thêm vào giỏ</button>
+            </div>
+            <div class="product" data-category="audio" data-name="Tai nghe gaming OverEar Thunder G300" data-price="899000">
+                <img src="img/Tai nghe gaming OverEar Thunder G300.png" alt="">
+                <div class="name">Tai nghe gaming OverEar Thunder G300</div>
+                <div class="price">899.000₫</div>
+                <button onclick="addToCart('Tai nghe gaming OverEar Thunder G300', 899000)">Thêm vào giỏ</button>
+            </div>
+            <div class="product" data-category="audio" data-name="Loa mini Desktop USB StereoNeo" data-price="199000">
+                <img src="img/Loa mini Desktop USB StereoNeo.png" alt="">
+                <div class="name">Loa mini Desktop USB StereoNeo</div>
+                <div class="price">199.000₫</div>
+                <button onclick="addToCart('Loa mini Desktop USB StereoNeo', 199000)">Thêm vào giỏ</button>
+            </div>
+            <div class="product" data-category="audio" data-name="Soundbar TV SlimBar S2" data-price="1290000">
+                <img src="img/Soundbar TV SlimBar S2.png" alt="">
+                <div class="name">Soundbar TV SlimBar S2</div>
+                <div class="price">1.290.000₫</div>
+                <button onclick="addToCart('Soundbar TV SlimBar S2', 1290000)">Thêm vào giỏ</button>
+            </div>
+            <div class="product" data-category="computer-accessories" data-name="Chuột không dây Ergonomic M55" data-price="219000">
+                <img src="img/Chuột không dây Ergonomic M55.webp" alt="">
+                <div class="name">Chuột không dây Ergonomic M55</div>
+                <div class="price">219.000₫</div>
+                <button onclick="addToCart('Chuột không dây Ergonomic M55', 219000)">Thêm vào giỏ</button>
+            </div>
+            <div class="product" data-category="computer-accessories" data-name="Bàn phím cơ giả BlueKey K87 (RGB)" data-price="799000">
+                <img src="img/Bàn phím cơ giả BlueKey K87 (RGB).webp" alt="">
+                <div class="name">Bàn phím cơ giả BlueKey K87 (RGB)</div>
+                <div class="price">799.000₫</div>
+                <button onclick="addToCart('Bàn phím cơ giả BlueKey K87 (RGB)', 799000)">Thêm vào giỏ</button>
+            </div>
+            <div class="product" data-category="computer-accessories" data-name="Pad chuột cỡ lớn Glider XL" data-price="149000">
+                <img src="img/Pad chuột cỡ lớn Glider XL.webp" alt="">
+                <div class="name">Pad chuột cỡ lớn Glider XL</div>
+                <div class="price">149.000₫</div>
+                <button onclick="addToCart('Pad chuột cỡ lớn Glider XL', 149000)">Thêm vào giỏ</button>
+            </div>
+            <div class="product" data-category="computer-accessories" data-name="Chuột gaming RGB Laser Pro" data-price="399000">
+                <img src="img/Chuột gaming RGB Laser Pro.webp" alt="">
+                <div class="name">Chuột gaming RGB Laser Pro</div>
+                <div class="price">399.000₫</div>
+                <button onclick="addToCart('Chuột gaming RGB Laser Pro', 399000)">Thêm vào giỏ</button>
+            </div>
+            <div class="product" data-category="computer-accessories" data-name="Bàn phím cơ cơ học MechKey T9" data-price="1199000">
+                <img src="img/Bàn phím cơ cơ học MechKey T9.webp" alt="">
+                <div class="name">Bàn phím cơ cơ học MechKey T9</div>
+                <div class="price">1.199.000₫</div>
+                <button onclick="addToCart('Bàn phím cơ cơ học MechKey T9', 1199000)">Thêm vào giỏ</button>
+            </div>
+            <div class="product" data-category="audio" data-name="Tai nghe USB có mic OfficeHead H1" data-price="299000">
+                <img src="img/Tai nghe USB có mic OfficeHead H1.webp" alt="">
+                <div class="name">Tai nghe USB có mic OfficeHead H1</div>
+                <div class="price">299.000₫</div>
+                <button onclick="addToCart('Tai nghe USB có mic OfficeHead H1', 299000)">Thêm vào giỏ</button>
+            </div>
+            <div class="product" data-category="mobile-charging" data-name="Sạc nhanh USB-C 20W PowerCharge" data-price="199000">
+                <img src="img/Sạc nhanh USB-C 20W PowerCharge.webp" alt="">
+                <div class="name">Sạc nhanh USB-C 20W PowerCharge</div>
+                <div class="price">199.000₫</div>
+                <button onclick="addToCart('Sạc nhanh USB-C 20W PowerCharge', 199000)">Thêm vào giỏ</button>
+            </div>
+            <div class="product" data-category="mobile-charging" data-name="Cáp sạc USB-C to Lightning 1m" data-price="99000">
+                <img src="img/Cáp sạc USB-C to Lightning 1m.webp" alt="">
+                <div class="name">Cáp sạc USB-C to Lightning 1m</div>
+                <div class="price">99.000₫</div>
+                <button onclick="addToCart('Cáp sạc USB-C to Lightning 1m', 99000)">Thêm vào giỏ</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>© 2025 Cửa hàng Công nghệ. All rights reserved.</p>
+    </footer>
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <h2>Giỏ hàng của bạn</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                        <th>Tổng</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items"></tbody>
+            </table>
+            <h3>Tổng cộng: <span id="cart-total">0₫</span></h3>
+            <button id="checkout-btn">Thanh toán</button>
+            <button id="close-cart">Đóng</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
